@@ -1,4 +1,2 @@
-# react-rgsbbx
-
-YORGA - let`s replace hierarchy with something smarter
+# YORGA - let`s replace hierarchy with something smarter
 
