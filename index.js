@@ -1,13 +1,13 @@
-import './style.css';
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import App from './components/App';
-import Base, { BaseContext } from './base';
+import BaseContext from './base/Base';
 
-
-render(
-  <BaseContext.Provider value={new Base()}>
-    <App name='you'/>
-  </BaseContext.Provider>,
+render( 
+  <div>
+    <BaseContext.Provider >
+      <App name='you'/>
+    </BaseContext.Provider>
+  </div>,
   document.getElementById('root')
 );
