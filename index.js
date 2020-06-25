@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import { createGlobalState } from 'react-hooks-global-state';
+import initBase from './base/initBase';
 import App from './components/App';
-import BaseContext from './base/Base';
+ 
+const { useGlobalState, getGlobalState, setGlobalState } = createGlobalState({ base: null, auth: null, theme: 'dark' });
+
+initBase(setGlobalState);
 
 render( 
   <div>
-    <BaseContext.Provider >
-      <App name='you'/>
-    </BaseContext.Provider>
+    <App name='you'/>
   </div>,
   document.getElementById('root')
 );
