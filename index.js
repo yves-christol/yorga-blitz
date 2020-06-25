@@ -8,6 +8,10 @@ const { useGlobalState, getGlobalState, setGlobalState } = createGlobalState({ b
 
 initBase(setGlobalState);
 
+console.log('Toto '+getGlobalState('theme'));
+console.log('Toto '+getGlobalState('base'));
+setTimeout(() => { console.log('Toto '+getGlobalState('base')) }, 5000);
+
 render( 
   <div>
     <App name='you'/>
