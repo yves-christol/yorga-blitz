@@ -11,8 +11,6 @@ if (!app.apps.length) {
 
 const initBase = (setGlobalState) => {
   console.log('Tata');
-  setGlobalState('auth', app.auth());
-  setGlobalState('base', app.firestore());
   setGlobalState('count', 22);
   console.log('Tete');
 }
