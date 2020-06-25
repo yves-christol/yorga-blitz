@@ -14,6 +14,7 @@ const initBase = (setGlobalState) => {
   setGlobalState('auth', app.auth());
   setGlobalState('base', app.firestore());
   setGlobalState('count', 22);
+  console.log('Tete');
 }
 
 export default initBase;
