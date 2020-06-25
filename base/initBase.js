@@ -1,14 +1,19 @@
-import firebase from 'firebase';
+import * as app  from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
 import firebaseConfig from './firebaseConfig';
+
+
+if (!app.apps.length) {
+    console.log('Titi');
+    app.initializeApp(firebaseConfig);
+}
 
 const initBase = (setGlobalState) => {
   console.log('Tata');
-  if (!firebase.apps.length) {
-    console.log('Titi');
-    firebase.initializeApp(firebaseConfig);
-    setGlobalState('auth', firebase.auth());
-    setGlobalState('base', firebase.firestore());
-  }
+  setGlobalState('auth', app.auth());
+  setGlobalState('base', app.firestore());
+  setGlobalState('count', 22);
 }
 
 export default initBase;
