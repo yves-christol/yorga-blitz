@@ -8,29 +8,11 @@ const { useGlobalState, getGlobalState, setGlobalState } = createGlobalState({ b
 
 initBase(setGlobalState);
 
-console.log('Count '+getGlobalState('count'));
-console.log('Toto '+getGlobalState('base'));
-setTimeout(() => { console.log('Toto '+getGlobalState('base')) }, 5000);
-
-const Counter = () => {
-  const [countLocal, setCountLocal] = useState(0);
-  const [count, setCount] = useGlobalState('count');
-  return (
-    <div>
-      <span>Counter: {countLocal} global {count}</span>
-      {/* update state by passing callback function */}
-      <button onClick={() => {setCountLocal(countLocal + 1); setCount(v => v + 1)}}>+1</button>
-      {/* update state by passing new value */}
-      <button onClick={() => {setCountLocal(countLocal-1); setCount(count - 1)}}>-1</button>
-    </div>
-  );
-};
+console.log('Base '+getGlobalState('base'));
 
 render( 
   <div>
     <App name='you'/>
-    <Counter />
-    <Counter />
   </div>,
   document.getElementById('root')
 );
