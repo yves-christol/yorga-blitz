@@ -17,4 +17,3 @@ const initBase = () => {
 }
 
 export default initBase;
-
