@@ -2,16 +2,15 @@ import * as app  from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 import firebaseConfig from './firebaseConfig';
+import {setAuth, setBase} from '../globalState';
 
 
-const initBase = (setGlobalState) => {
+const initBase = () => {
   if (!app.apps.length) { // to avoid multiple calls on hot reload
     console.log('Init base for '+firebaseConfig.projectId);
     app.initializeApp(firebaseConfig);
-    const auth = app.auth();
-    const base = app.firestore();
-    setGlobalState('auth', auth);
-    setGlobalState('base', base);
+    setAuth(app.auth());
+    setBase(app.firestore());
   } else {
     console.log('Base already initialized');
   }
