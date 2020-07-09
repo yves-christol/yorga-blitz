@@ -9,8 +9,8 @@ const initBase = () => {
   if (!app.apps.length) { // to avoid multiple calls on hot reload
     console.log('Init base for '+firebaseConfig.projectId);
     app.initializeApp(firebaseConfig);
-    setAuth(app.auth());
-    setBase(app.firestore());
+    //setAuth(app.auth());
+    //setBase(app.firestore());
   } else {
     console.log('Base already initialized');
   }
