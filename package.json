@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "firebase": "^7.15.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "firebase": "^7.15.5",
     "react-hooks-global-state": "^1.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
